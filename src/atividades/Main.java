@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int opcao, idade;
+        double lado;
         
     Scanner sc = new Scanner(System.in);
     
@@ -20,12 +21,20 @@ public class Main {
         
         switch (opcao){
             case 1:
-                System.out.println("Digite sua idade: ");
+                System.out.print("Digite sua idade: ");
                 idade = sc.nextInt();
                 
                 VerificadorVoto oVerificador = new VerificadorVoto(idade);
                 oVerificador.podeVotar();
-                             
+            break;
+                
+            case 2:
+                System.out.print("Digite o comprimento do lado: ");
+                lado = sc.nextDouble();
+                
+                CalculadoraGeometria aCalculadora = new CalculadoraGeometria(lado);
+                aCalculadora.calcularAreaQuadrado();
+            break;
         }
         
     } while (opcao != 5);

@@ -5,7 +5,8 @@ public class VerificadorVoto {
     
     public VerificadorVoto(int idade){
         this.idade = idade;
-}
+    }
+    
     public void podeVotar(){
         if (idade >= 16){
             System.out.println("Pode votar");
@@ -13,4 +14,6 @@ public class VerificadorVoto {
             System.out.println("Nao pode votar");
         }
     }
+    
+    
 }
